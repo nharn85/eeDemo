@@ -1,0 +1,16 @@
+{embed="embeds/html_header"}
+	{embed="embeds/page_header"}
+	<div id="maincontent">
+		<div id="right_side">
+				{snp_latest_news}
+				{snp_latest_products}
+		</div>
+		<div id="left_side">
+			{exp:channel:entries channel="home" disable="categories|member_data|pagination" sort="asc" }
+				<h2 class="underline">{title}</h2>
+				{page_body}
+			{/exp:channel:entries}
+		</div>
+	</div>
+{snp_footer}
+		
