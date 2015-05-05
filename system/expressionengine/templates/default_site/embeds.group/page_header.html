@@ -7,7 +7,7 @@
 			<div class="submit">
 				<ul>
 					<li><a class="selected" href="{homepage}"><span>Home</span></a></li>
-					<li><a href="#"><span>About</span></a></li>
+					<li><a href="{path='about'}"><span>About</span></a></li>
 					<li><a href="#"><span>Products</span></a></li>
 					<li><a href="#"><span>Services</span></a></li>
 					<li><a href="#"><span>Weblog</span></a></li>
@@ -29,7 +29,11 @@
 			</div>
 			<div class="lside">
 					<div class="padding">
-						<strong>Lorem ipsum</strong> dolor sit amet, consectetuer adipiscing elit. Morbi elementum, ipsum nec auctor condimentum, magna odio aliquet elit, non bibendum lorem ligula at nisi. <a href="#" title="">Proin sapien</a>.
+						{exp:channel:entries channel="misc_content" limit="1" dynamic="no"
+						disable="categories|member_data|pagination"
+						url_title="{embed:the_url_title}" }
+						{page_body}
+						{/exp:channel:entries}
 					</div>
 			</div>
 		</div>
